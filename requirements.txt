@@ -1,0 +1,30 @@
+Knowledge
+
+PHP 5.3 and more (4+ years experience)
+MVC Framework experience, such as Zend Framework 2, Symfony 2
+Very strong Object Oriented Programming and design pattern skills
+Go Lang
+MySQL / Doctrine 2
+PHPUnit
+Queue system (RabbitMQ, Gearman, etc…)
+REST web services
+Git / Github
+Caches (memcached, etc…)
+Even better if you have:
+
+SCRUM
+ElasticSearch
+JQuery
+MongoDb
+Jenkins
+Vagran
+Linux
+TDD (Test Driven Development), or BDD (Behaviour Driven Development)
+Experience using CodeCeption, or Behat
+PhpStorm
+NodeJs
+Java, for the OOP knowledge
+Varnish
+
+################################################################################################
+
