@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Details | Paavit</title>
+    <meta name="description" content="Discover detailed information, features, and benefits of Paavit premium home care and cleaning products.">
+    <meta name="keywords" content="Paavit products, FMCG details, home care products, floor cleaner, handwash, detergent">
+    
+    <!-- Open Graph for SEO -->
+    <meta property="og:title" content="Product Details | Paavit Premium Cleaning">
+    <meta property="og:description" content="Explore the premium ingredients and superior performance of Paavit home care products.">
+    <meta property="og:type" content="product">
+    <meta property="og:url" content="https://www.paavit.com/product-detail.html">
+    <meta name="twitter:card" content="summary_large_image">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <div class="container nav-container">
+            <a href="index.html" class="logo">Paavit.</a>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="products.html" style="color: var(--primary); border-bottom: 2px solid var(--primary);">Products</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+            <div class="nav-actions">
+                <button class="theme-toggle" aria-label="Toggle Theme"><i class="fas fa-moon"></i></button>
+            </div>
+        </div>
+    </header>
+
+    <section class="product-detail-section section-padding" style="margin-top: 80px; min-height: 80vh; display: flex; align-items: center;">
+        <div class="container" id="product-detail-container">
+            <a href="products.html" class="btn btn-outline reveal" style="margin-bottom: 2rem; padding: 0.5rem 1.5rem;"><i class="fas fa-arrow-left" style="margin-right: 8px;"></i> Back to Products</a>
+            
+            <div class="product-detail-wrapper reveal">
+                <div>
+                    <img id="pd-image" src="" alt="Product Loading" class="product-detail-img">
+                </div>
+                <div>
+                    <span id="pd-category" class="hero-tag">Loading Category...</span>
+                    <h1 id="pd-name" style="margin-bottom: 1rem;">Loading Product...</h1>
+                    <h3 id="pd-shortDesc" style="color: var(--secondary); font-weight: 500;"></h3>
+                    <p id="pd-description" style="font-size: 1.1rem; margin-top: 1.5rem;"></p>
+                    
+                    <ul id="pd-features" class="product-features-list">
+                        <!-- JS Injected Features -->
+                    </ul>
+                    
+                    <a href="contact.html" class="btn btn-primary" style="margin-top: 1rem; gap: 10px;">Inquire for Bulk Order <i class="fas fa-paper-plane"></i></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Simple Footer for subpages -->
+    <footer style="padding: 2rem 0; text-align: center;">
+        <div class="container">
+            <p style="color: #94A3B8;">&copy; 2026 Paavit FMCG. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
