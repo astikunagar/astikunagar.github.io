@@ -1,3 +1,6 @@
+---
+nav: contact
+---
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -10,7 +13,7 @@
     <meta property="og:title" content="Contact Us | Paavit">
     <meta property="og:description" content="Interested in becoming a distributor or supplying your hotel? Reach out today.">
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://www.paavit.com/contact.html">
+    <meta property="og:url" content="{{ site.paavit_url }}/contact.html">
 
     <!-- JSON-LD LocalBusiness Schema -->
     <script type="application/ld+json">
@@ -18,37 +21,29 @@
       "@context": "https://schema.org",
       "@type": "LocalBusiness",
       "name": "Paavit",
-      "image": "https://www.paavit.com/logo.png",
+      "image": "{{ site.paavit_url }}/logo.png",
       "email": "hello@paavit.com",
-      "telephone": "+91-98765-43210",
+      "telephone": "+91-98336-00919",
       "address": {
         "@type": "PostalAddress",
+        "streetAddress": "Malad West",
         "addressLocality": "Mumbai",
         "addressRegion": "Maharashtra",
         "addressCountry": "IN"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 19.1869,
+        "longitude": 72.8347
       }
     }
     </script>
 
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="stylesheet" href="style.css">
+    {% include paavit/head-assets.html %}
 </head>
 <body>
 
-    <header>
-        <div class="container nav-container">
-            <a href="index.html" class="logo">Paavit.</a>
-            <ul class="nav-links">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="products.html">Products</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="contact.html" style="color: var(--primary); border-bottom: 2px solid var(--primary);">Contact</a></li>
-            </ul>
-            <div class="nav-actions">
-                <button class="theme-toggle" aria-label="Toggle Theme"><i class="fas fa-moon"></i></button>
-            </div>
-        </div>
-    </header>
+    {% include paavit/header.html %}
 
     <section class="contact-section section-padding" style="margin-top: 80px;">
         <div class="container grid-2">
@@ -61,31 +56,39 @@
                         <div class="glass-icon" style="width: 40px; height: 40px; font-size: 1rem;"><i class="fas fa-map-marker-alt"></i></div>
                         <div>
                             <h4 style="margin: 0;">Corporate Office</h4>
-                            <p style="margin: 0; font-size: 0.9rem;">Mumbai, Maharashtra, India</p>
+                            <p style="margin: 0; font-size: 0.9rem;">Malad West, Mumbai, Maharashtra, India</p>
                         </div>
                     </div>
                     <div style="display: flex; align-items: center; gap: 1rem; margin-bottom: 1rem;">
                         <div class="glass-icon" style="width: 40px; height: 40px; font-size: 1rem;"><i class="fas fa-phone"></i></div>
                         <div>
                             <h4 style="margin: 0;">Call Us</h4>
-                            <p style="margin: 0; font-size: 0.9rem;">+91 98765 43210</p>
+                            <p style="margin: 0; font-size: 0.9rem;"><a href="tel:+919833600919" style="color: inherit;">+91 98336 00919</a></p>
                         </div>
                     </div>
                 </div>
 
-                <a href="#" class="btn btn-outline" style="gap: 10px;"><i class="fab fa-whatsapp"></i> Chat on WhatsApp</a>
+                <a href="https://wa.me/919833600919" target="_blank" rel="noopener noreferrer" class="btn btn-outline" style="gap: 10px;"><i class="fab fa-whatsapp"></i> Chat on WhatsApp</a>
             </div>
 
             <div class="contact-card reveal">
-                <form action="#" method="POST">
+                <div id="form-success" class="form-success" role="alert" hidden>
+                    <i class="fas fa-check-circle"></i>
+                    <p><strong>Thank you!</strong> Your message has been sent. We'll get back to you soon.</p>
+                </div>
+                <form action="https://formsubmit.co/hello@paavit.com" method="POST">
+                    <input type="hidden" name="_subject" value="New Paavit Contact Form Inquiry">
+                    <input type="hidden" name="_next" value="{{ site.paavit_url }}/contact.html?sent=true">
+                    <input type="hidden" name="_captcha" value="false">
+                    <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off">
                     <div class="form-group">
-                        <input type="text" class="form-control" placeholder="Full Name" required>
+                        <input type="text" name="name" class="form-control" placeholder="Full Name" required>
                     </div>
                     <div class="form-group">
-                        <input type="email" class="form-control" placeholder="Email Address" required>
+                        <input type="email" name="email" class="form-control" placeholder="Your Email Address" required>
                     </div>
                     <div class="form-group">
-                        <select class="form-control" required style="appearance: none;">
+                        <select name="inquiry_type" class="form-control" required style="appearance: none;">
                             <option value="" disabled selected>Inquiry Type</option>
                             <option value="distributor">Distributorship</option>
                             <option value="bulk">Bulk Order (Hotels/Restaurants)</option>
@@ -93,7 +96,18 @@
                         </select>
                     </div>
                     <div class="form-group">
-                        <textarea class="form-control" placeholder="Your Message" required></textarea>
+                        <textarea name="message" class="form-control" placeholder="Your Message" required></textarea>
+                    </div>
+                    <div class="form-group captcha-group">
+                        <label for="captcha-answer" class="captcha-label">Security Check</label>
+                        <div class="captcha-box">
+                            <span id="captcha-question" class="captcha-question" aria-live="polite"></span>
+                            <button type="button" id="captcha-refresh" class="captcha-refresh" aria-label="Refresh security check">
+                                <i class="fas fa-sync-alt"></i>
+                            </button>
+                        </div>
+                        <input type="text" id="captcha-answer" class="form-control" placeholder="Enter the answer" required autocomplete="off" inputmode="numeric">
+                        <p id="captcha-error" class="captcha-error" role="alert" hidden>Incorrect answer. Please try again.</p>
                     </div>
                     <button type="submit" class="btn btn-primary" style="width: 100%;">Send Message</button>
                 </form>
@@ -101,13 +115,30 @@
         </div>
     </section>
 
-    <!-- Simple Footer for subpages -->
-    <footer style="padding: 2rem 0; text-align: center;">
+    <section class="map-section section-padding">
         <div class="container">
-            <p style="color: #94A3B8;">&copy; 2026 Paavit FMCG. All rights reserved.</p>
+            <div class="text-center reveal" style="max-width: 600px; margin: 0 auto 3rem;">
+                <h2>Find Us</h2>
+                <p>Visit our corporate office in Malad West, Mumbai.</p>
+            </div>
+            <div class="map-container reveal">
+                <iframe
+                    class="map-embed"
+                    src="https://maps.google.com/maps?q=Malad+West,+Mumbai,+Maharashtra,+India&t=&z=14&ie=UTF8&iwloc=&output=embed"
+                    allowfullscreen=""
+                    loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade"
+                    title="Paavit Corporate Office — Malad West, Mumbai">
+                </iframe>
+                <a href="https://www.google.com/maps/search/?api=1&query=Malad+West,+Mumbai,+Maharashtra,+India" target="_blank" rel="noopener noreferrer" class="map-link">
+                    <i class="fas fa-directions"></i> Open in Google Maps
+                </a>
+            </div>
         </div>
-    </footer>
+    </section>
 
-    <script src="script.js"></script>
+    {% include paavit/footer-simple.html %}
+
+    {% include paavit/scripts.html %}
 </body>
 </html>

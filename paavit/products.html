@@ -1,3 +1,6 @@
+---
+nav: products
+---
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -10,7 +13,7 @@
     <meta property="og:title" content="Our Core Range | Paavit Products">
     <meta property="og:description" content="Formulated with advanced chemistry to provide superior cleaning performance without compromising on safety.">
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://www.paavit.com/products.html">
+    <meta property="og:url" content="{{ site.paavit_url }}/products.html">
     <meta name="twitter:card" content="summary_large_image">
 
     <!-- JSON-LD Product List Schema -->
@@ -19,36 +22,22 @@
       "@context": "https://schema.org",
       "@type": "ItemList",
       "itemListElement": [
-        { "@type": "ListItem", "position": 1, "url": "https://www.paavit.com/product-detail.html?id=floor-cleaner", "name": "Paavit White Floor Cleaner" },
-        { "@type": "ListItem", "position": 2, "url": "https://www.paavit.com/product-detail.html?id=detergent", "name": "Paavit Detergent Liquid" },
-        { "@type": "ListItem", "position": 3, "url": "https://www.paavit.com/product-detail.html?id=toilet-cleaner", "name": "Paavit Toilet Cleaner" },
-        { "@type": "ListItem", "position": 4, "url": "https://www.paavit.com/product-detail.html?id=dish-wash", "name": "Paavit Dish Wash Liquid" },
-        { "@type": "ListItem", "position": 5, "url": "https://www.paavit.com/product-detail.html?id=ice-blast", "name": "Paavit Soft Wash Ice Blast" },
-        { "@type": "ListItem", "position": 6, "url": "https://www.paavit.com/product-detail.html?id=orange", "name": "Paavit Soft Wash Orange" },
-        { "@type": "ListItem", "position": 7, "url": "https://www.paavit.com/product-detail.html?id=strawberry", "name": "Paavit Soft Wash Strawberry" }
+        { "@type": "ListItem", "position": 1, "url": "{{ site.paavit_url }}/product-detail.html?id=floor-cleaner", "name": "Paavit White Floor Cleaner" },
+        { "@type": "ListItem", "position": 2, "url": "{{ site.paavit_url }}/product-detail.html?id=detergent", "name": "Paavit Detergent Liquid" },
+        { "@type": "ListItem", "position": 3, "url": "{{ site.paavit_url }}/product-detail.html?id=toilet-cleaner", "name": "Paavit Toilet Cleaner" },
+        { "@type": "ListItem", "position": 4, "url": "{{ site.paavit_url }}/product-detail.html?id=dish-wash", "name": "Paavit Dish Wash Liquid" },
+        { "@type": "ListItem", "position": 5, "url": "{{ site.paavit_url }}/product-detail.html?id=ice-blast", "name": "Paavit Soft Wash Ice Blast" },
+        { "@type": "ListItem", "position": 6, "url": "{{ site.paavit_url }}/product-detail.html?id=orange", "name": "Paavit Soft Wash Orange" },
+        { "@type": "ListItem", "position": 7, "url": "{{ site.paavit_url }}/product-detail.html?id=strawberry", "name": "Paavit Soft Wash Strawberry" }
       ]
     }
     </script>
 
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="stylesheet" href="style.css">
+    {% include paavit/head-assets.html %}
 </head>
 <body>
 
-    <header>
-        <div class="container nav-container">
-            <a href="index.html" class="logo">Paavit.</a>
-            <ul class="nav-links">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="products.html" style="color: var(--primary); border-bottom: 2px solid var(--primary);">Products</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="contact.html">Contact</a></li>
-            </ul>
-            <div class="nav-actions">
-                <button class="theme-toggle" aria-label="Toggle Theme"><i class="fas fa-moon"></i></button>
-            </div>
-        </div>
-    </header>
+    {% include paavit/header.html %}
 
     <section class="section-padding" style="margin-top: 80px; background: var(--bg-light); text-align: center;">
         <div class="container reveal">
@@ -62,7 +51,7 @@
             
             <div class="product-card reveal">
                 <div class="product-img-wrapper">
-                    <img src="Paavit-floor-cleaner.png" alt="Paavit White Floor Cleaner">
+                    <img loading="lazy" src="media/individual-images/Paavit-floor-cleaner.png" width="856" height="972" alt="Paavit White Floor Cleaner">
                 </div>
                 <h3>White Floor Cleaner</h3>
                 <p>Advanced stain removal and 99.9% germ protection.</p>
@@ -71,7 +60,7 @@
             
             <div class="product-card reveal" style="transition-delay: 0.1s;">
                 <div class="product-img-wrapper">
-                    <img src="Paavit-Detergent-Liquid.png" alt="Paavit Detergent Liquid">
+                    <img loading="lazy" src="media/individual-images/Paavit-Detergent-Liquid.png" width="866" height="966" alt="Paavit Detergent Liquid">
                 </div>
                 <h3>Detergent Liquid</h3>
                 <p>Gentle on fabrics, tough on stubborn stains.</p>
@@ -80,7 +69,7 @@
 
             <div class="product-card reveal" style="transition-delay: 0.2s;">
                 <div class="product-img-wrapper">
-                    <img src="Paavit-Toilet-Cleaner-Liquid.png" alt="Paavit Toilet Cleaner Liquid">
+                    <img loading="lazy" src="media/individual-images/Paavit-Toilet-Cleaner-Liquid.png" width="868" height="970" alt="Paavit Toilet Cleaner Liquid">
                 </div>
                 <h3>Toilet Cleaner (10x)</h3>
                 <p>Thick gel formula for ultimate bathroom hygiene.</p>
@@ -89,7 +78,7 @@
 
             <div class="product-card reveal" style="transition-delay: 0.3s;">
                 <div class="product-img-wrapper">
-                    <img src="Paavit-Dish-Wash-Liquid.png" alt="Paavit Dish Wash Liquid">
+                    <img loading="lazy" src="media/individual-images/Paavit-Dish-Wash-Liquid.png" width="866" height="968" alt="Paavit Dish Wash Liquid">
                 </div>
                 <h3>Dish Wash Liquid</h3>
                 <p>Cuts through tough grease instantly.</p>
@@ -98,7 +87,7 @@
 
             <div class="product-card reveal" style="transition-delay: 0.4s;">
                 <div class="product-img-wrapper">
-                    <img src="Paavit-Ice-Blast-Handwash-Liquid.png" alt="Paavit Soft Wash Ice Blast">
+                    <img loading="lazy" src="media/individual-images/Paavit-Ice-Blast-Handwash-Liquid.png" width="860" height="972" alt="Paavit Soft Wash Ice Blast">
                 </div>
                 <h3>Soft Wash - Ice Blast</h3>
                 <p>Cooling handwash for absolute freshness.</p>
@@ -107,7 +96,7 @@
 
             <div class="product-card reveal" style="transition-delay: 0.5s;">
                 <div class="product-img-wrapper">
-                    <img src="Paavit-Orange-Handwash-Liquid.png" alt="Paavit Soft Wash Orange">
+                    <img loading="lazy" src="media/individual-images/Paavit-Orange-Handwash-Liquid.png" width="864" height="970" alt="Paavit Soft Wash Orange">
                 </div>
                 <h3>Soft Wash - Orange</h3>
                 <p>Citrus-infused germ protection.</p>
@@ -116,7 +105,7 @@
 
             <div class="product-card reveal" style="transition-delay: 0.6s;">
                 <div class="product-img-wrapper">
-                    <img src="Paavit-Strawberry-Handwash-Liquid.png" alt="Paavit Soft Wash Strawberry">
+                    <img loading="lazy" src="media/individual-images/Paavit-Strawberry-Handwash-Liquid.png" width="864" height="968" alt="Paavit Soft Wash Strawberry">
                 </div>
                 <h3>Soft Wash - Strawberry</h3>
                 <p>Sweet and gentle cleansing for soft hands.</p>
@@ -126,13 +115,8 @@
         </div>
     </section>
 
-    <!-- Simple Footer for subpages -->
-    <footer style="padding: 2rem 0; text-align: center;">
-        <div class="container">
-            <p style="color: #94A3B8;">&copy; 2026 Paavit FMCG. All rights reserved.</p>
-        </div>
-    </footer>
+    {% include paavit/footer-simple.html %}
 
-    <script src="script.js"></script>
+    {% include paavit/scripts.html %}
 </body>
 </html>

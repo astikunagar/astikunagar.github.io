@@ -1,3 +1,6 @@
+---
+nav: about
+---
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -10,34 +13,20 @@
     <meta property="og:title" content="Our Story | Paavit FMCG">
     <meta property="og:description" content="Redefining cleanliness for the modern home.">
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://www.paavit.com/about.html">
+    <meta property="og:url" content="{{ site.paavit_url }}/about.html">
     <meta name="twitter:card" content="summary">
 
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="stylesheet" href="style.css">
+    {% include paavit/head-assets.html %}
 </head>
 <body>
 
-    <header>
-        <div class="container nav-container">
-            <a href="index.html" class="logo">Paavit.</a>
-            <ul class="nav-links">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="products.html">Products</a></li>
-                <li><a href="about.html" style="color: var(--primary); border-bottom: 2px solid var(--primary);">About</a></li>
-                <li><a href="contact.html">Contact</a></li>
-            </ul>
-            <div class="nav-actions">
-                <button class="theme-toggle" aria-label="Toggle Theme"><i class="fas fa-moon"></i></button>
-            </div>
-        </div>
-    </header>
+    {% include paavit/header.html %}
 
     <section class="section-padding" style="margin-top: 80px; background: var(--bg-white);">
         <div class="container grid-2">
             <div class="reveal">
                 <!-- Maintained a placeholder for brand story imagery as no direct image was provided for this section -->
-                <img src="https://placehold.co/800x600/F8FAFC/0E7C66?text=Clean+Home+Lifestyle" alt="Paavit Lifestyle" style="border-radius: var(--radius-lg); box-shadow: var(--shadow-lg);">
+                <img loading="lazy" src="https://placehold.co/800x600/F8FAFC/0E7C66?text=Clean+Home+Lifestyle" width="800" height="600" alt="Paavit Lifestyle" style="border-radius: var(--radius-lg); box-shadow: var(--shadow-lg);">
             </div>
             <div class="reveal">
                 <span class="hero-tag">Our Story</span>
@@ -59,13 +48,8 @@
         </div>
     </section>
 
-    <!-- Simple Footer for subpages -->
-    <footer style="padding: 2rem 0; text-align: center; margin-top: auto;">
-        <div class="container">
-            <p style="color: #94A3B8;">&copy; 2026 Paavit FMCG. All rights reserved.</p>
-        </div>
-    </footer>
+    {% include paavit/footer-simple.html %}
 
-    <script src="script.js"></script>
+    {% include paavit/scripts.html %}
 </body>
 </html>

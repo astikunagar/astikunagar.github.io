@@ -1,3 +1,6 @@
+---
+nav: home
+---
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -10,8 +13,8 @@
     <!-- Open Graph / Social Media -->
     <meta property="og:title" content="Paavit | Premium Home Care Products">
     <meta property="og:description" content="Experience the perfect blend of powerful cleaning and safe formulas with Paavit's premium product range.">
-    <meta property="og:image" content="https://www.paavit.com/Paavit-floor-cleaner.png">
-    <meta property="og:url" content="https://www.paavit.com">
+    <meta property="og:image" content="{{ site.paavit_url }}/media/individual-images/Paavit-floor-cleaner.png">
+    <meta property="og:url" content="{{ site.paavit_url }}/">
     <meta property="og:type" content="website">
     
     <!-- Twitter Cards -->
@@ -25,41 +28,25 @@
       "@context": "https://schema.org",
       "@type": "Organization",
       "name": "Paavit",
-      "url": "https://www.paavit.com",
-      "logo": "https://www.paavit.com/logo.png",
+      "url": "{{ site.paavit_url }}/",
+      "logo": "{{ site.paavit_url }}/logo.png",
       "description": "Premium home care solutions bridging the gap between powerful cleaning and gentle care.",
       "contactPoint": {
         "@type": "ContactPoint",
-        "telephone": "+91-98765-43210",
+        "telephone": "+91-98336-00919",
         "contactType": "customer service",
         "areaServed": "IN"
       }
     }
     </script>
 
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="stylesheet" href="style.css">
+    <link rel="preload" as="image" href="media/individual-images/Paavit-floor-cleaner.png" fetchpriority="high">
+    {% include paavit/head-assets.html %}
 </head>
 <body>
 
     <div id="progress-bar"></div>
-
-    <header>
-        <div class="container nav-container">
-            <a href="index.html" class="logo">Paavit.</a>
-            <ul class="nav-links">
-                <li><a href="index.html" style="color: var(--primary); border-bottom: 2px solid var(--primary);">Home</a></li>
-                <li><a href="products.html">Products</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="contact.html">Contact</a></li>
-            </ul>
-            <div class="nav-actions">
-                <button class="theme-toggle" aria-label="Toggle Theme"><i class="fas fa-moon"></i></button>
-                <a href="products.html" class="btn btn-primary">Shop Now</a>
-                <button class="mobile-menu-btn" aria-label="Menu"><i class="fas fa-bars"></i></button>
-            </div>
-        </div>
-    </header>
+    {% include paavit/header.html %}
 
     <section class="hero">
         <div class="container grid-2">
@@ -73,7 +60,82 @@
                 </div>
             </div>
             <div class="hero-visual reveal">
-                <img src="Paavit-floor-cleaner.png" alt="Paavit White Floor Cleaner" class="floating-bottle">
+                <div class="hero-carousel">
+                    <div class="hero-carousel-viewport">
+                        <div class="hero-carousel-slide active" data-index="0">
+                            <span class="hero-product-tag">White Floor Cleaner</span>
+                            <img src="media/individual-images/Paavit-floor-cleaner.png" alt="Paavit White Floor Cleaner" class="floating-bottle" fetchpriority="high" loading="eager" width="856" height="972">
+                        </div>
+                        <div class="hero-carousel-slide" data-index="1">
+                            <span class="hero-product-tag">Detergent Liquid</span>
+                            <img loading="lazy" src="media/individual-images/Paavit-Detergent-Liquid.png" width="866" height="966" alt="Paavit Detergent Liquid" class="floating-bottle">
+                        </div>
+                        <div class="hero-carousel-slide" data-index="2">
+                            <span class="hero-product-tag">Toilet Cleaner</span>
+                            <img loading="lazy" src="media/individual-images/Paavit-Toilet-Cleaner-Liquid.png" width="868" height="970" alt="Paavit Toilet Cleaner Liquid" class="floating-bottle">
+                        </div>
+                        <div class="hero-carousel-slide" data-index="3">
+                            <span class="hero-product-tag">Dish Wash Liquid</span>
+                            <img loading="lazy" src="media/individual-images/Paavit-Dish-Wash-Liquid.png" width="866" height="968" alt="Paavit Dish Wash Liquid" class="floating-bottle">
+                        </div>
+                        <div class="hero-carousel-slide" data-index="4">
+                            <span class="hero-product-tag">Soft Wash - Ice Blast</span>
+                            <img loading="lazy" src="media/individual-images/Paavit-Ice-Blast-Handwash-Liquid.png" width="860" height="972" alt="Paavit Soft Wash Ice Blast" class="floating-bottle">
+                        </div>
+                        <div class="hero-carousel-slide" data-index="5">
+                            <span class="hero-product-tag">Soft Wash - Orange</span>
+                            <img loading="lazy" src="media/individual-images/Paavit-Orange-Handwash-Liquid.png" width="864" height="970" alt="Paavit Soft Wash Orange" class="floating-bottle">
+                        </div>
+                        <div class="hero-carousel-slide" data-index="6">
+                            <span class="hero-product-tag">Soft Wash - Strawberry</span>
+                            <img loading="lazy" src="media/individual-images/Paavit-Strawberry-Handwash-Liquid.png" width="864" height="968" alt="Paavit Soft Wash Strawberry" class="floating-bottle">
+                        </div>
+                        <div class="hero-carousel-slide" data-index="7">
+                            <span class="hero-product-tag">White Floor Cleaner · 5L</span>
+                            <img loading="lazy" src="media/individual-images/Paavit-Floor-Cleaner-Liquid-5Ltr.png" width="722" height="710" alt="Paavit White Floor Cleaner 5 Litre can" class="floating-bottle">
+                        </div>
+                        <div class="hero-carousel-slide" data-index="8">
+                            <span class="hero-product-tag">Detergent Liquid · 5L</span>
+                            <img loading="lazy" src="media/individual-images/Paavit-washing-detergent-Liquid-5Ltr.png" width="828" height="844" alt="Paavit Detergent Liquid 5 Litre can" class="floating-bottle">
+                        </div>
+                        <div class="hero-carousel-slide" data-index="9">
+                            <span class="hero-product-tag">Toilet Cleaner · 5L</span>
+                            <img loading="lazy" src="media/individual-images/Paavit-Toilet-cleaner-Liquid-5Ltr.png" width="856" height="838" alt="Paavit Toilet Cleaner 5 Litre can" class="floating-bottle">
+                        </div>
+                        <div class="hero-carousel-slide" data-index="10">
+                            <span class="hero-product-tag">Dish Wash Liquid · 5L</span>
+                            <img loading="lazy" src="media/individual-images/Paavit-dishwash-Liquid-5Ltr.png" width="858" height="842" alt="Paavit Dish Wash Liquid 5 Litre can" class="floating-bottle">
+                        </div>
+                        <div class="hero-carousel-slide" data-index="11">
+                            <span class="hero-product-tag">Soft Wash - Ice Blast · 5L</span>
+                            <img loading="lazy" src="media/individual-images/Paavit-Handwash-ice-blast-Liquid-5Ltr.png" width="852" height="848" alt="Paavit Soft Wash Ice Blast 5 Litre can" class="floating-bottle">
+                        </div>
+                        <div class="hero-carousel-slide" data-index="12">
+                            <span class="hero-product-tag">Soft Wash - Orange · 5L</span>
+                            <img loading="lazy" src="media/individual-images/Paavit-Handwash--orangeLiquid-5Ltr.png" width="856" height="844" alt="Paavit Soft Wash Orange 5 Litre can" class="floating-bottle">
+                        </div>
+                        <div class="hero-carousel-slide" data-index="13">
+                            <span class="hero-product-tag">Soft Wash - Strawberry · 5L</span>
+                            <img loading="lazy" src="media/individual-images/Paavit-Handwash-strawberry-Liquid-5Ltr.png" width="730" height="710" alt="Paavit Soft Wash Strawberry 5 Litre can" class="floating-bottle">
+                        </div>
+                    </div>
+                    <div class="hero-carousel-dots" role="tablist" aria-label="Featured products">
+                        <button class="hero-carousel-dot active" data-index="0" aria-label="White Floor Cleaner 1 Litre" aria-selected="true"></button>
+                        <button class="hero-carousel-dot" data-index="1" aria-label="Detergent Liquid 1 Litre" aria-selected="false"></button>
+                        <button class="hero-carousel-dot" data-index="2" aria-label="Toilet Cleaner 1 Litre" aria-selected="false"></button>
+                        <button class="hero-carousel-dot" data-index="3" aria-label="Dish Wash Liquid 1 Litre" aria-selected="false"></button>
+                        <button class="hero-carousel-dot" data-index="4" aria-label="Soft Wash Ice Blast 1 Litre" aria-selected="false"></button>
+                        <button class="hero-carousel-dot" data-index="5" aria-label="Soft Wash Orange 1 Litre" aria-selected="false"></button>
+                        <button class="hero-carousel-dot" data-index="6" aria-label="Soft Wash Strawberry 1 Litre" aria-selected="false"></button>
+                        <button class="hero-carousel-dot" data-index="7" aria-label="White Floor Cleaner 5 Litre" aria-selected="false"></button>
+                        <button class="hero-carousel-dot" data-index="8" aria-label="Detergent Liquid 5 Litre" aria-selected="false"></button>
+                        <button class="hero-carousel-dot" data-index="9" aria-label="Toilet Cleaner 5 Litre" aria-selected="false"></button>
+                        <button class="hero-carousel-dot" data-index="10" aria-label="Dish Wash Liquid 5 Litre" aria-selected="false"></button>
+                        <button class="hero-carousel-dot" data-index="11" aria-label="Soft Wash Ice Blast 5 Litre" aria-selected="false"></button>
+                        <button class="hero-carousel-dot" data-index="12" aria-label="Soft Wash Orange 5 Litre" aria-selected="false"></button>
+                        <button class="hero-carousel-dot" data-index="13" aria-label="Soft Wash Strawberry 5 Litre" aria-selected="false"></button>
+                    </div>
+                </div>
                 <div class="glass-card">
                     <div class="glass-icon"><i class="fas fa-shield-virus"></i></div>
                     <div>
@@ -117,6 +179,228 @@
         </div>
     </section>
 
+    <!-- Where to Use -->
+    <section class="usage section-padding">
+        <div class="usage-bg" aria-hidden="true">
+            <div class="usage-orb usage-orb-1"></div>
+            <div class="usage-orb usage-orb-2"></div>
+            <div class="usage-grid-pattern"></div>
+        </div>
+
+        <div class="container usage-container">
+            <div class="usage-header reveal">
+                <div class="usage-header-copy">
+                    <span class="hero-tag">Complete Home Care</span>
+                    <h2>Every Corner,<br><span class="usage-headline-accent">One Trusted Brand</span></h2>
+                    <p>Paavit covers your entire home — from morning dishes to evening laundry. Pick the right product for every space.</p>
+                </div>
+                <div class="usage-stats">
+                    <div class="usage-stat">
+                        <strong>5</strong>
+                        <span>Home Spaces</span>
+                    </div>
+                    <div class="usage-stat">
+                        <strong>7</strong>
+                        <span>Products</span>
+                    </div>
+                    <div class="usage-stat">
+                        <strong>1L & 5L</strong>
+                        <span>Pack Sizes</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="usage-bento">
+                <article class="usage-card usage-card--floors usage-card--hero reveal">
+                    <div class="usage-card-glow"></div>
+                    <div class="usage-card-body">
+                        <span class="usage-index">01</span>
+                        <div class="usage-card-top">
+                            <div class="usage-icon"><i class="fas fa-house-chimney"></i></div>
+                            <span class="usage-label">Living Spaces</span>
+                        </div>
+                        <h3>Floors & Living Areas</h3>
+                        <p>Tiles, marble, vinyl, and hardwood — spotless across living rooms, bedrooms, hallways, and balconies.</p>
+                        <a href="product-detail.html?id=floor-cleaner" class="usage-link">
+                            <img loading="lazy" src="media/individual-images/Paavit-floor-cleaner.png" width="856" height="972" alt="">
+                            <span>White Floor Cleaner</span>
+                            <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+                    <div class="usage-card-visual">
+                        <img loading="lazy" src="media/individual-images/Paavit-floor-cleaner.png" width="856" height="972" alt="Paavit White Floor Cleaner">
+                    </div>
+                </article>
+
+                <article class="usage-card usage-card--kitchen reveal" style="transition-delay: 0.05s;">
+                    <div class="usage-card-glow"></div>
+                    <div class="usage-card-body">
+                        <span class="usage-index">02</span>
+                        <div class="usage-card-top">
+                            <div class="usage-icon"><i class="fas fa-utensils"></i></div>
+                            <span class="usage-label">Kitchen</span>
+                        </div>
+                        <h3>Grease-Free Cooking Zone</h3>
+                        <p>Cut through grease on utensils, cookware, and countertops after every meal.</p>
+                        <a href="product-detail.html?id=dish-wash" class="usage-link">
+                            <img loading="lazy" src="media/individual-images/Paavit-Dish-Wash-Liquid.png" width="866" height="968" alt="">
+                            <span>Dish Wash Liquid</span>
+                            <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </article>
+
+                <article class="usage-card usage-card--bathroom reveal" style="transition-delay: 0.1s;">
+                    <div class="usage-card-glow"></div>
+                    <div class="usage-card-body">
+                        <span class="usage-index">03</span>
+                        <div class="usage-card-top">
+                            <div class="usage-icon"><i class="fas fa-bath"></i></div>
+                            <span class="usage-label">Bathroom</span>
+                        </div>
+                        <h3>Toilet & Bath Hygiene</h3>
+                        <p>Deep-clean bowls, remove stains, and eliminate odors for a fresh bathroom daily.</p>
+                        <a href="product-detail.html?id=toilet-cleaner" class="usage-link">
+                            <img loading="lazy" src="media/individual-images/Paavit-Toilet-Cleaner-Liquid.png" width="868" height="970" alt="">
+                            <span>Toilet Cleaner</span>
+                            <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </article>
+
+                <article class="usage-card usage-card--laundry reveal" style="transition-delay: 0.15s;">
+                    <div class="usage-card-glow"></div>
+                    <div class="usage-card-body">
+                        <span class="usage-index">04</span>
+                        <div class="usage-card-top">
+                            <div class="usage-icon"><i class="fas fa-shirt"></i></div>
+                            <span class="usage-label">Laundry</span>
+                        </div>
+                        <h3>Fabrics & Linens</h3>
+                        <p>Everyday clothes, bedsheets, and delicates — top-load or front-load, no residue.</p>
+                        <a href="product-detail.html?id=detergent" class="usage-link">
+                            <img loading="lazy" src="media/individual-images/Paavit-Detergent-Liquid.png" width="866" height="966" alt="">
+                            <span>Detergent Liquid</span>
+                            <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </article>
+
+                <article class="usage-card usage-card--hands reveal" style="transition-delay: 0.2s;">
+                    <div class="usage-card-glow"></div>
+                    <div class="usage-card-body">
+                        <span class="usage-index">05</span>
+                        <div class="usage-card-top">
+                            <div class="usage-icon"><i class="fas fa-hands-bubbles"></i></div>
+                            <span class="usage-label">Personal Care</span>
+                        </div>
+                        <h3>Hands & Daily Hygiene</h3>
+                        <p>Before meals, after chores — gentle germ protection with a fragrant lather.</p>
+                        <div class="usage-link-stack">
+                            <a href="product-detail.html?id=ice-blast" class="usage-link">
+                                <img loading="lazy" src="media/individual-images/Paavit-Ice-Blast-Handwash-Liquid.png" width="860" height="972" alt="">
+                                <span>Soft Wash Ice Blast</span>
+                                <i class="fas fa-arrow-right"></i>
+                            </a>
+                            <a href="product-detail.html?id=orange" class="usage-link">
+                                <img loading="lazy" src="media/individual-images/Paavit-Orange-Handwash-Liquid.png" width="864" height="970" alt="">
+                                <span>Soft Wash Orange</span>
+                                <i class="fas fa-arrow-right"></i>
+                            </a>
+                            <a href="product-detail.html?id=strawberry" class="usage-link">
+                                <img loading="lazy" src="media/individual-images/Paavit-Strawberry-Handwash-Liquid.png" width="864" height="968" alt="">
+                                <span>Soft Wash Strawberry</span>
+                                <i class="fas fa-arrow-right"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="usage-handwash-cluster" aria-hidden="true">
+                        <img loading="lazy" src="media/individual-images/Paavit-Ice-Blast-Handwash-Liquid.png" width="860" height="972" alt="">
+                        <img loading="lazy" src="media/individual-images/Paavit-Orange-Handwash-Liquid.png" width="864" height="970" alt="">
+                        <img loading="lazy" src="media/individual-images/Paavit-Strawberry-Handwash-Liquid.png" width="864" height="968" alt="">
+                    </div>
+                </article>
+
+                <article class="usage-banner reveal" style="transition-delay: 0.25s;">
+                    <div class="usage-banner-content">
+                        <div class="usage-banner-icon"><i class="fas fa-building"></i></div>
+                        <div>
+                            <span class="usage-label usage-label-light">Commercial & Bulk</span>
+                            <h3>Hotels, Offices & Institutions</h3>
+                            <p>5 litre cans built for housekeeping teams, restaurants, and hostels that need reliable volume at scale.</p>
+                        </div>
+                    </div>
+                    <div class="usage-banner-actions">
+                        <a href="products.html" class="btn btn-outline usage-btn-light">View All Products</a>
+                        <a href="contact.html" class="btn btn-primary">Inquire for Bulk <i class="fas fa-arrow-right" style="margin-left: 8px;"></i></a>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- Collection Showcase -->
+    <section class="showcase section-padding">
+        <div class="container">
+            <div class="text-center reveal" style="max-width: 640px; margin: 0 auto 3.5rem;">
+                <span class="hero-tag">Bulk & Retail Packs</span>
+                <h2 style="color: var(--primary);">Available in 1L & 5L</h2>
+                <p>Choose from convenient 1 litre bottles for everyday use, or 5 litre cans for families, hotels, and bulk orders.</p>
+            </div>
+
+            <div class="showcase-slider reveal">
+                <div class="showcase-frame">
+                    <div class="showcase-viewport">
+                        <div class="showcase-slide active" data-index="0">
+                            <span class="showcase-badge">1 Litre</span>
+                            <img loading="lazy" src="media/slider/paavit-1-1ltr-collection.png" width="2742" height="1536" alt="Paavit 1 Litre retail collection">
+                            <div class="showcase-overlay">
+                                <h3>1 Litre Everyday Packs</h3>
+                                <p>Compact bottles ideal for retail shelves and daily household cleaning.</p>
+                            </div>
+                        </div>
+                        <div class="showcase-slide" data-index="1">
+                            <span class="showcase-badge">5 Litre</span>
+                            <img loading="lazy" src="media/slider/paavit-2-5ltr-handwash-cans-collection.png" width="1447" height="720" alt="Paavit 5 Litre handwash can collection">
+                            <div class="showcase-overlay">
+                                <h3>5 Litre Handwash Cans</h3>
+                                <p>Long-lasting Soft Wash cans in Ice Blast, Orange & Strawberry.</p>
+                            </div>
+                        </div>
+                        <div class="showcase-slide" data-index="2">
+                            <span class="showcase-badge">5 Litre</span>
+                            <img loading="lazy" src="media/slider/paavit-3-5ltr-other-cans-collection.png" width="1554" height="672" alt="Paavit 5 Litre home care can collection">
+                            <div class="showcase-overlay">
+                                <h3>5 Litre Home Care Cans</h3>
+                                <p>High-volume cans for floor cleaner, detergent, dish wash and more.</p>
+                            </div>
+                        </div>
+                        <div class="showcase-slide" data-index="3">
+                            <span class="showcase-badge">5 Litre</span>
+                            <img loading="lazy" src="media/slider/paavit-4-5ltr-cans-collection.png" width="1463" height="720" alt="Paavit complete 5 Litre can collection">
+                            <div class="showcase-overlay">
+                                <h3>Complete 5 Litre Collection</h3>
+                                <p>All seven Paavit essentials — from Soft Wash to floor cleaner — in 5 litre cans.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <button class="showcase-nav showcase-prev" aria-label="Previous slide"><i class="fas fa-chevron-left"></i></button>
+                    <button class="showcase-nav showcase-next" aria-label="Next slide"><i class="fas fa-chevron-right"></i></button>
+                </div>
+
+                <div class="showcase-footer">
+                    <div class="showcase-dots" role="tablist" aria-label="Collection slides">
+                        <button class="showcase-dot active" data-index="0" aria-label="1 Litre collection" aria-selected="true"></button>
+                        <button class="showcase-dot" data-index="1" aria-label="5 Litre handwash collection" aria-selected="false"></button>
+                        <button class="showcase-dot" data-index="2" aria-label="5 Litre home care collection" aria-selected="false"></button>
+                        <button class="showcase-dot" data-index="3" aria-label="Complete 5 Litre collection" aria-selected="false"></button>
+                    </div>
+                    <a href="contact.html" class="btn btn-outline showcase-cta">Inquire for Bulk Orders <i class="fas fa-arrow-right" style="margin-left: 8px;"></i></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- Featured Products Showcase -->
     <section class="products section-padding">
         <div class="container">
@@ -129,7 +413,7 @@
                 <div class="product-card reveal">
                     <span class="product-badge">Bestseller</span>
                     <div class="product-img-wrapper">
-                        <img src="Paavit-floor-cleaner.png" alt="Paavit White Floor Cleaner">
+                        <img loading="lazy" src="media/individual-images/Paavit-floor-cleaner.png" width="856" height="972" alt="Paavit White Floor Cleaner">
                     </div>
                     <h3>White Floor Cleaner</h3>
                     <p>Advanced stain removal and 99.9% germ protection.</p>
@@ -137,7 +421,7 @@
                 </div>
                 <div class="product-card reveal" style="transition-delay: 0.1s;">
                     <div class="product-img-wrapper">
-                        <img src="Paavit-Detergent-Liquid.png" alt="Paavit Detergent Liquid">
+                        <img loading="lazy" src="media/individual-images/Paavit-Detergent-Liquid.png" width="866" height="966" alt="Paavit Detergent Liquid">
                     </div>
                     <h3>Detergent Liquid</h3>
                     <p>Gentle on fabrics, tough on stubborn stains.</p>
@@ -145,7 +429,7 @@
                 </div>
                 <div class="product-card reveal" style="transition-delay: 0.2s;">
                     <div class="product-img-wrapper">
-                        <img src="Paavit-Ice-Blast-Handwash-Liquid.png" alt="Paavit Soft Wash Ice Blast">
+                        <img loading="lazy" src="media/individual-images/Paavit-Ice-Blast-Handwash-Liquid.png" width="860" height="972" alt="Paavit Soft Wash Ice Blast">
                     </div>
                     <h3>Soft Wash - Ice Blast</h3>
                     <p>Cooling handwash for absolute freshness.</p>
@@ -168,53 +452,10 @@
         </div>
     </section>
 
-    <!-- Footer -->
-    <footer>
-        <div class="container">
-            <div class="footer-grid">
-                <div>
-                    <a href="index.html" class="footer-logo">Paavit.</a>
-                    <p class="footer-desc">Premium home care solutions bridging the gap between powerful cleaning and gentle, eco-friendly care.</p>
-                    <div class="social-links">
-                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
-                    </div>
-                </div>
-                <div class="footer-links">
-                    <h4>Quick Links</h4>
-                    <ul>
-                        <li><a href="index.html">Home</a></li>
-                        <li><a href="about.html">Our Story</a></li>
-                        <li><a href="products.html">Products</a></li>
-                        <li><a href="contact.html">Contact Us</a></li>
-                    </ul>
-                </div>
-                <div class="footer-links">
-                    <h4>Categories</h4>
-                    <ul>
-                        <li><a href="products.html">Hand Wash</a></li>
-                        <li><a href="products.html">Dish Wash</a></li>
-                        <li><a href="products.html">Floor Cleaner</a></li>
-                        <li><a href="products.html">Detergent</a></li>
-                    </ul>
-                </div>
-                <div class="footer-links">
-                    <h4>Contact</h4>
-                    <ul>
-                        <li><i class="fas fa-envelope" style="margin-right:8px; color:var(--accent);"></i> hello@paavit.com</li>
-                        <li><i class="fas fa-phone" style="margin-right:8px; color:var(--accent);"></i> +91 98765 43210</li>
-                        <li><i class="fas fa-map-marker-alt" style="margin-right:8px; color:var(--accent);"></i> Mumbai, India</li>
-                    </ul>
-                </div>
-            </div>
-            <div class="footer-bottom">
-                <p>&copy; 2026 Paavit FMCG. All rights reserved.</p>
-            </div>
-        </div>
-    </footer>
+    {% include paavit/footer-full.html %}
 
     <button id="back-to-top" aria-label="Back to Top"><i class="fas fa-arrow-up"></i></button>
 
-    <script src="script.js"></script>
+    {% include paavit/scripts.html %}
 </body>
 </html>
