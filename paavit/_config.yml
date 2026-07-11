@@ -1,0 +1,16 @@
+# GitHub Pages — https://astikunagar.github.io
+# Paavit site lives at /paavit/ (do not set global baseurl — root portfolio site stays at /)
+# Local Warden overrides: _config.warden.yml (destination + paavit_url)
+
+paavit_url: https://astikunagar.github.io/paavit
+
+exclude:
+  - backup
+  - socket
+  - .warden
+  - .cursor
+  - Gemfile
+  - Gemfile.lock
+  - _config.warden.yml
+  - paavit-backup-v1.zip
+  - paavit/Paavit-Website.zip

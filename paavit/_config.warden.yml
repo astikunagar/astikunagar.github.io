@@ -1,0 +1,47 @@
+# Local Warden overrides — see .env and .warden/warden-env.yml
+#   hosts: 127.0.0.1 local.paavit.com
+#   warden svc up && warden sign-certificate local.paavit.com && warden env up
+
+paavit_url: https://local.paavit.com
+destination: _site
+
+exclude:
+  - index.html
+  - about.html
+  - contact.html
+  - products.html
+  - product-detail.html
+  - script.js
+  - style.css
+  - media
+  - backup
+  - socket
+  - css
+  - js
+  - icons
+  - images
+  - paavit-backup-v1.zip
+  - paavit/Paavit-Website.zip
+  - Gemfile
+  - Gemfile.lock
+  - .warden
+  - .cursor
+  - .git
+  - .gitignore
+  - _config.warden.yml
+  - vendor
+  - "*.php"
+  - "*.sql"
+  - "*.xml"
+  - "*.json"
+  - .htaccess
+  - robots.txt
+  - sitemap.xml
+  - googlefe599c4ecb379364.html
+  - browserconfig.xml
+  - manifest.json
+  - email_signature.php
+  - spath.php
+  - sort.php
+  - update_count.php
+  - dbtest.sql

@@ -1,0 +1,55 @@
+---
+nav: about
+---
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us | Paavit FMCG</title>
+    <meta name="description" content="Learn about Paavit's mission to deliver uncompromising hygiene with skin-safe, eco-conscious chemistry.">
+    <meta name="keywords" content="About Paavit, FMCG company India, eco-friendly cleaning, hygiene brand">
+    
+    <meta property="og:title" content="Our Story | Paavit FMCG">
+    <meta property="og:description" content="Redefining cleanliness for the modern home.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="{{ site.paavit_url }}/about.html">
+    <meta name="twitter:card" content="summary">
+
+    {% include paavit/head-assets.html %}
+</head>
+<body>
+
+    {% include paavit/header.html %}
+
+    <section class="section-padding" style="margin-top: 80px; background: var(--bg-white);">
+        <div class="container grid-2">
+            <div class="reveal">
+                <!-- Maintained a placeholder for brand story imagery as no direct image was provided for this section -->
+                <img loading="lazy" src="https://placehold.co/800x600/F8FAFC/0E7C66?text=Clean+Home+Lifestyle" width="800" height="600" alt="Paavit Lifestyle" style="border-radius: var(--radius-lg); box-shadow: var(--shadow-lg);">
+            </div>
+            <div class="reveal">
+                <span class="hero-tag">Our Story</span>
+                <h2>Redefining Cleanliness for the Modern Home</h2>
+                <p style="font-size: 1.1rem; margin-bottom: 1.5rem;">At Paavit, we believe that a clean home is the foundation of a healthy, happy family. Born out of a desire to create powerful cleaning agents without the harsh toxic footprint, we have developed a premium line of FMCG products.</p>
+                <p>Through rigorous manufacturing excellence and quality assurance, every bottle of Paavit guarantees performance that you can trust—day in and day out.</p>
+                
+                <div style="display: flex; gap: 2rem; margin-top: 2rem;">
+                    <div>
+                        <h3 style="color: var(--primary); margin-bottom: 0.5rem;">Mission</h3>
+                        <p style="font-size: 0.9rem;">To deliver uncompromising hygiene with skin-safe, eco-conscious chemistry.</p>
+                    </div>
+                    <div>
+                        <h3 style="color: var(--primary); margin-bottom: 0.5rem;">Vision</h3>
+                        <p style="font-size: 0.9rem;">To be the most trusted home care brand globally, known for innovation.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    {% include paavit/footer-simple.html %}
+
+    {% include paavit/scripts.html %}
+</body>
+</html>
