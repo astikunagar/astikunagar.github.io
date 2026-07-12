@@ -101,7 +101,12 @@ header.scrolled { padding: 0.5rem 0; box-shadow: var(--shadow-sm); }
 .nav-actions { display: flex; gap: 1rem; align-items: center; }
 .theme-toggle { background: none; border: none; color: var(--text-dark); font-size: 1.2rem; cursor: pointer; transition: var(--transition); }
 .theme-toggle:hover { color: var(--primary); transform: rotate(15deg); }
-.mobile-menu-btn { display: none; background: none; border: none; font-size: 1.5rem; color: var(--text-dark); cursor: pointer; }
+.mobile-menu-btn { display: none; background: none; border: none; font-size: 1.5rem; color: var(--text-dark); cursor: pointer; position: relative; z-index: 1002; }
+.mobile-nav-backdrop {
+    display: none; position: fixed; inset: 0; background: rgba(15, 23, 42, 0.4);
+    z-index: 999; opacity: 0; transition: opacity 0.3s ease;
+}
+.mobile-nav-backdrop.active { display: block; opacity: 1; }
 
 /* ================= Progress Bar ================= */
 #progress-bar { position: fixed; top: 0; left: 0; height: 3px; background: var(--accent); z-index: 1001; width: 0%; transition: width 0.1s ease; }
@@ -1111,8 +1116,24 @@ footer { background: var(--text-dark); color: #F8FAFC; padding: 5rem 0 2rem; }
     .usage-stats { flex-wrap: wrap; }
     .usage-stat { flex: 1; min-width: 90px; }
     .usage-banner-actions .btn { width: 100%; }
+    .nav-container { position: relative; }
     .nav-links, .nav-actions .btn { display: none; }
     .mobile-menu-btn { display: block; }
+    header.nav-open .nav-links {
+        display: flex; flex-direction: column; align-items: stretch;
+        position: absolute; top: calc(100% + 0.75rem); left: 0; right: 0;
+        background: rgba(248, 250, 252, 0.98); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px);
+        padding: 0.5rem 0; border-radius: var(--radius-md); box-shadow: var(--shadow-md);
+        gap: 0; z-index: 1001;
+    }
+    [data-theme="dark"] header.nav-open .nav-links { background: rgba(15, 23, 42, 0.98); }
+    header.nav-open .nav-links a {
+        display: block; padding: 1rem 1.5rem; border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+    }
+    [data-theme="dark"] header.nav-open .nav-links a { border-bottom-color: rgba(255, 255, 255, 0.06); }
+    header.nav-open .nav-links li:last-child a { border-bottom: none; }
+    header.nav-open .nav-links a::after { display: none; }
+    header.nav-open .nav-links a.nav-active { border-bottom-color: transparent; }
     .hero-content { text-align: center; }
     .hero-btns { justify-content: center; }
     .glass-card { display: none; }

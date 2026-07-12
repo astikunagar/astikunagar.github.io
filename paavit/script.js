@@ -245,6 +245,55 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
+    // --- 7. Mobile Navigation Menu ---
+    const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
+    const navLinks = document.querySelector('.nav-links');
+    let mobileNavBackdrop = document.querySelector('.mobile-nav-backdrop');
+
+    if (mobileMenuBtn && navLinks) {
+        if (!mobileNavBackdrop) {
+            mobileNavBackdrop = document.createElement('div');
+            mobileNavBackdrop.className = 'mobile-nav-backdrop';
+            document.body.appendChild(mobileNavBackdrop);
+        }
+
+        const menuIcon = mobileMenuBtn.querySelector('i');
+
+        const setMobileMenuOpen = (open) => {
+            header.classList.toggle('nav-open', open);
+            mobileMenuBtn.setAttribute('aria-expanded', String(open));
+            mobileNavBackdrop.classList.toggle('active', open);
+            if (menuIcon) {
+                menuIcon.classList.toggle('fa-bars', !open);
+                menuIcon.classList.toggle('fa-times', open);
+            }
+            document.body.style.overflow = open ? 'hidden' : '';
+        };
+
+        mobileMenuBtn.addEventListener('click', (e) => {
+            e.stopPropagation();
+            setMobileMenuOpen(!header.classList.contains('nav-open'));
+        });
+
+        navLinks.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => setMobileMenuOpen(false));
+        });
+
+        mobileNavBackdrop.addEventListener('click', () => setMobileMenuOpen(false));
+
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape' && header.classList.contains('nav-open')) {
+                setMobileMenuOpen(false);
+            }
+        });
+
+        window.addEventListener('resize', () => {
+            if (window.innerWidth > 768 && header.classList.contains('nav-open')) {
+                setMobileMenuOpen(false);
+            }
+        });
+    }
+
     // --- 8. Hero Product Carousel ---
     const heroCarousel = document.querySelector('.hero-carousel');
     if (heroCarousel) {
