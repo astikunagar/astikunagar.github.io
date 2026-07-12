@@ -90,10 +90,14 @@ nav: contact
                     <div class="form-group">
                         <select name="inquiry_type" class="form-control" required style="appearance: none;">
                             <option value="" disabled selected>Inquiry Type</option>
+                            <option value="offer">Offer / Combo Order</option>
                             <option value="distributor">Distributorship</option>
                             <option value="bulk">Bulk Order (Hotels/Restaurants)</option>
                             <option value="general">General Feedback</option>
                         </select>
+                    </div>
+                    <div class="form-group">
+                        <input type="text" name="offer_code" id="offer-code" class="form-control" placeholder="Offer Code (if applicable)">
                     </div>
                     <div class="form-group">
                         <textarea name="message" class="form-control" placeholder="Your Message" required></textarea>

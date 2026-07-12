@@ -1,0 +1,91 @@
+---
+nav: offers
+---
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Offers & Combos | Paavit Premium Cleaning</title>
+    <meta name="description" content="Explore Paavit combo offers, subscription savings, bulk bundles, and mix-and-match deals on floor cleaners, detergents, dish wash, toilet cleaner, and handwashes.">
+    <meta name="keywords" content="Paavit offers, cleaning combo deals, bulk home care, handwash bundle, subscription discount, FMCG offers India">
+
+    <meta property="og:title" content="Exclusive Offers & Combos | Paavit">
+    <meta property="og:description" content="Save more with curated bundles, loyalty subscriptions, and every valid product combination across our full range.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="{{ site.paavit_url }}/offers.html">
+    <meta name="twitter:card" content="summary_large_image">
+
+    {% include paavit/head-assets.html %}
+</head>
+<body>
+
+    {% include paavit/header.html %}
+
+    <section class="offers-hero section-padding" style="margin-top: 80px;">
+        <div class="container text-center reveal">
+            <span class="hero-tag">Save More, Clean Better</span>
+            <h1 style="margin-bottom: 1rem;">Offers &amp; Combo Deals</h1>
+            <p style="max-width: 720px; margin: 0 auto 2rem;">From loyalty subscriptions to every valid two- and three-product combination — find the deal that fits your home, office, or business.</p>
+            <div class="offers-stats">
+                <div class="offers-stat">
+                    <strong id="offers-count">—</strong>
+                    <span>Active offers</span>
+                </div>
+                <div class="offers-stat">
+                    <strong>12th</strong>
+                    <span>Month free on loyalty</span>
+                </div>
+                <div class="offers-stat">
+                    <strong>1L &amp; 5L</strong>
+                    <span>Pack sizes covered</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="offers-section section-padding" style="padding-top: 0;">
+        <div class="container">
+            <div class="offers-toolbar reveal">
+                <div class="offers-filters" role="tablist" aria-label="Filter offers">
+                    <button type="button" class="offers-filter active" data-filter="all">All Offers</button>
+                    <button type="button" class="offers-filter" data-filter="subscription">Subscriptions</button>
+                    <button type="button" class="offers-filter" data-filter="bundle">Curated Bundles</button>
+                    <button type="button" class="offers-filter" data-filter="combo-2">2-Product Combos</button>
+                    <button type="button" class="offers-filter" data-filter="combo-3">3-Product Combos</button>
+                    <button type="button" class="offers-filter" data-filter="volume">Volume Deals</button>
+                    <button type="button" class="offers-filter" data-filter="handwash">Handwash Specials</button>
+                </div>
+                <p class="offers-results" id="offers-results" aria-live="polite"></p>
+            </div>
+
+            <div class="offers-grid" id="offers-grid"></div>
+
+            <div class="offers-empty" id="offers-empty" hidden>
+                <i class="fas fa-tags"></i>
+                <p>No offers match this filter.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="offers-terms section-padding" style="padding-top: 0;">
+        <div class="container reveal">
+            <div class="offers-terms-card">
+                <h3><i class="fas fa-info-circle"></i> General Terms</h3>
+                <ul>
+                    <li>Offers cannot be combined unless explicitly stated.</li>
+                    <li>Subscription deals require consecutive monthly orders of the same product and pack size.</li>
+                    <li>Combo and bundle pricing is applied at checkout or on your invoice — contact us to place an order.</li>
+                    <li>5 Litre cans qualify for additional bulk savings on select volume offers.</li>
+                    <li>Offers are valid for retail, society, hotel, and distributor orders unless marked otherwise.</li>
+                </ul>
+                <a href="contact.html" class="btn btn-primary" style="margin-top: 1.5rem;">Request a Custom Quote <i class="fas fa-arrow-right" style="margin-left: 8px;"></i></a>
+            </div>
+        </div>
+    </section>
+
+    {% include paavit/footer-simple.html %}
+
+    {% include paavit/scripts.html %}
+</body>
+</html>
