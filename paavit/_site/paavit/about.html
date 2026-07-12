@@ -1,84 +1,238 @@
+---
+nav: about
+---
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About Us | Paavit FMCG</title>
-    <meta name="description" content="Learn about Paavit's mission to deliver uncompromising hygiene with skin-safe, eco-conscious chemistry.">
-    <meta name="keywords" content="About Paavit, FMCG company India, eco-friendly cleaning, hygiene brand">
-    
+    <meta name="description" content="Discover Paavit's story — a premium Indian FMCG brand crafting powerful, skin-safe home care products for modern families. Mission, values, and our promise of everyday cleaning with everyday care.">
+    <meta name="keywords" content="About Paavit, FMCG company India, eco-friendly cleaning, hygiene brand, home care manufacturer">
+
     <meta property="og:title" content="Our Story | Paavit FMCG">
-    <meta property="og:description" content="Redefining cleanliness for the modern home.">
+    <meta property="og:description" content="Born from a belief that clean homes shouldn't come at the cost of family safety — meet the team behind Paavit.">
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://local.paavit.com/about.html">
-    <meta name="twitter:card" content="summary">
+    <meta property="og:url" content="{{ site.paavit_url }}/about.html">
+    <meta property="og:image" content="{{ site.paavit_url }}/media/individual-images/Paavit-floor-cleaner.png">
+    <meta name="twitter:card" content="summary_large_image">
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer">
-
-<link rel="stylesheet" href="style.css">
-
-
+    {% include paavit/head-assets.html %}
 </head>
 <body>
 
-    <header>
-    <div class="container nav-container">
-        <a href="index.html" class="logo">Paavit.</a>
-        <ul class="nav-links">
-            <li><a href="index.html" class="">Home</a></li>
-            <li><a href="products.html" class="">Products</a></li>
-            <li><a href="about.html" class="nav-active">About</a></li>
-            <li><a href="contact.html" class="">Contact</a></li>
-        </ul>
-        <div class="nav-actions">
-            <button class="theme-toggle" aria-label="Toggle Theme"><i class="fas fa-moon"></i></button>
-            <a href="products.html" class="btn btn-primary nav-shop-btn">Shop Now</a>
-            <button class="mobile-menu-btn" aria-label="Menu"><i class="fas fa-bars"></i></button>
+    <div id="progress-bar"></div>
+    {% include paavit/header.html %}
+
+    <!-- Hero -->
+    <section class="about-hero section-padding">
+        <div class="about-hero-bg" aria-hidden="true">
+            <div class="about-orb about-orb-1"></div>
+            <div class="about-orb about-orb-2"></div>
+            <div class="about-grid-pattern"></div>
         </div>
-    </div>
-</header>
+        <div class="container grid-2">
+            <div class="about-hero-content reveal">
+                <span class="hero-tag">Our Story</span>
+                <h1>Clean Homes.<br><span class="about-headline-accent">Confident Families.</span></h1>
+                <p>Paavit was born from a simple belief — every Indian home deserves cleaning products that work brilliantly, smell beautiful, and never compromise on safety. We're not just another FMCG label; we're your partner in everyday care.</p>
+                <div class="hero-btns">
+                    <a href="products.html" class="btn btn-primary">Explore Products</a>
+                    <a href="contact.html" class="btn btn-outline">Partner With Us</a>
+                </div>
+            </div>
+            <div class="about-hero-visual reveal">
+                <div class="about-mosaic">
+                    <div class="about-mosaic-card about-mosaic-card--main">
+                        <img loading="lazy" src="media/individual-images/Paavit-floor-cleaner.png" width="856" height="972" alt="Paavit White Floor Cleaner" class="floating-bottle">
+                    </div>
+                    <div class="about-mosaic-card about-mosaic-card--sm about-mosaic-card--top">
+                        <img loading="lazy" src="media/individual-images/Paavit-Detergent-Liquid.png" width="866" height="966" alt="Paavit Detergent Liquid">
+                    </div>
+                    <div class="about-mosaic-card about-mosaic-card--sm about-mosaic-card--right">
+                        <img loading="lazy" src="media/individual-images/Paavit-Ice-Blast-Handwash-Liquid.png" width="860" height="972" alt="Paavit Soft Wash Ice Blast">
+                    </div>
+                    <div class="about-mosaic-badge">
+                        <div class="glass-icon"><i class="fas fa-award"></i></div>
+                        <div>
+                            <strong>Premium Quality</strong>
+                            <span>Tested &amp; Certified</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="wave">
+            <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+                <path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V120H0V95.8C59.71,118.08,130.83,119.29,198.71,109.93,240.84,104.1,282.88,88.4,321.39,56.44Z" class="shape-fill"></path>
+            </svg>
+        </div>
+    </section>
 
-
-    <section class="section-padding" style="margin-top: 80px; background: var(--bg-white);">
+    <!-- Story & Mission -->
+    <section class="about-story section-padding">
         <div class="container grid-2">
             <div class="reveal">
-                <!-- Maintained a placeholder for brand story imagery as no direct image was provided for this section -->
-                <img loading="lazy" src="https://placehold.co/800x600/F8FAFC/0E7C66?text=Clean+Home+Lifestyle" width="800" height="600" alt="Paavit Lifestyle" style="border-radius: var(--radius-lg); box-shadow: var(--shadow-lg);">
-            </div>
-            <div class="reveal">
-                <span class="hero-tag">Our Story</span>
+                <span class="hero-tag">Who We Are</span>
                 <h2>Redefining Cleanliness for the Modern Home</h2>
-                <p style="font-size: 1.1rem; margin-bottom: 1.5rem;">At Paavit, we believe that a clean home is the foundation of a healthy, happy family. Born out of a desire to create powerful cleaning agents without the harsh toxic footprint, we have developed a premium line of FMCG products.</p>
-                <p>Through rigorous manufacturing excellence and quality assurance, every bottle of Paavit guarantees performance that you can trust—day in and day out.</p>
-                
-                <div style="display: flex; gap: 2rem; margin-top: 2rem;">
-                    <div>
-                        <h3 style="color: var(--primary); margin-bottom: 0.5rem;">Mission</h3>
-                        <p style="font-size: 0.9rem;">To deliver uncompromising hygiene with skin-safe, eco-conscious chemistry.</p>
-                    </div>
-                    <div>
-                        <h3 style="color: var(--primary); margin-bottom: 0.5rem;">Vision</h3>
-                        <p style="font-size: 0.9rem;">To be the most trusted home care brand globally, known for innovation.</p>
-                    </div>
+                <p>At Paavit, we believe a clean home is the foundation of a healthy, happy family. Born out of a desire to create powerful cleaning agents without the harsh toxic footprint, we've developed a premium line of FMCG products — from floor cleaners and detergents to fragrant handwashes.</p>
+                <p>Through rigorous manufacturing excellence and quality assurance, every bottle of Paavit guarantees performance you can trust — day in and day out, across kitchens, bathrooms, living spaces, and beyond.</p>
+            </div>
+            <div class="about-mv-grid reveal">
+                <article class="about-mv-card">
+                    <div class="about-mv-icon"><i class="fas fa-bullseye"></i></div>
+                    <h3>Our Mission</h3>
+                    <p>To deliver uncompromising hygiene with skin-safe, eco-conscious chemistry that every family can rely on.</p>
+                </article>
+                <article class="about-mv-card">
+                    <div class="about-mv-icon"><i class="fas fa-eye"></i></div>
+                    <h3>Our Vision</h3>
+                    <p>To be India's most trusted home care brand — known for innovation, consistency, and care in every pour.</p>
+                </article>
+                <article class="about-mv-card about-mv-card--wide">
+                    <div class="about-mv-icon"><i class="fas fa-heart"></i></div>
+                    <h3>Our Promise</h3>
+                    <p><em>Everyday Cleaning. Everyday Care.</em> — powerful results without harsh compromises, for homes that feel as good as they look.</p>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- Core Values -->
+    <section class="features section-padding">
+        <div class="container">
+            <div class="text-center reveal" style="max-width: 640px; margin: 0 auto 4rem;">
+                <span class="hero-tag">What Drives Us</span>
+                <h2 style="color: var(--primary);">Built on Four Pillars</h2>
+                <p>Every formula, every fragrance, and every pack size is designed around the values that define Paavit.</p>
+            </div>
+            <div class="grid-4">
+                <div class="feature-card reveal">
+                    <i class="fas fa-flask feature-icon"></i>
+                    <h3>Science-Backed</h3>
+                    <p>Advanced stain-removal and germ-kill technology tested for real-world Indian homes.</p>
+                </div>
+                <div class="feature-card reveal" style="transition-delay: 0.1s;">
+                    <i class="fas fa-leaf feature-icon"></i>
+                    <h3>Skin-Safe</h3>
+                    <p>Tough on dirt, gentle on hands and surfaces — free from unnecessarily harsh chemicals.</p>
+                </div>
+                <div class="feature-card reveal" style="transition-delay: 0.2s;">
+                    <i class="fas fa-industry feature-icon"></i>
+                    <h3>Made in India</h3>
+                    <p>Proudly manufactured with rigorous QA, from our Mumbai base to households nationwide.</p>
+                </div>
+                <div class="feature-card reveal" style="transition-delay: 0.3s;">
+                    <i class="fas fa-handshake feature-icon"></i>
+                    <h3>Partner First</h3>
+                    <p>From retail shelves to hotel housekeeping — we grow alongside the businesses that trust us.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <footer class="footer-simple">
-    <div class="container">
-        <p>&copy; 2026 Paavit FMCG. All rights reserved.</p>
-    </div>
-</footer>
+    <!-- Journey Timeline -->
+    <section class="about-journey section-padding">
+        <div class="container">
+            <div class="text-center reveal" style="max-width: 600px; margin: 0 auto 4rem;">
+                <span class="hero-tag">Our Journey</span>
+                <h2>From Idea to Every Shelf</h2>
+                <p>A growing story of quality, trust, and homes that shine a little brighter every day.</p>
+            </div>
+            <div class="about-timeline">
+                <article class="about-timeline-item reveal">
+                    <div class="about-timeline-marker"><span>01</span></div>
+                    <div class="about-timeline-body">
+                        <h3>The Spark</h3>
+                        <p>Frustrated by harsh cleaners that worked but worried families, we set out to formulate something better — effective, fragrant, and genuinely safe for daily use.</p>
+                    </div>
+                </article>
+                <article class="about-timeline-item reveal" style="transition-delay: 0.1s;">
+                    <div class="about-timeline-marker"><span>02</span></div>
+                    <div class="about-timeline-body">
+                        <h3>First Product Line</h3>
+                        <p>Our core home care range launched — floor cleaner, detergent, toilet cleaner, and dish wash — each engineered for Indian water, surfaces, and routines.</p>
+                    </div>
+                </article>
+                <article class="about-timeline-item reveal" style="transition-delay: 0.2s;">
+                    <div class="about-timeline-marker"><span>03</span></div>
+                    <div class="about-timeline-body">
+                        <h3>Soft Wash Collection</h3>
+                        <p>Three signature handwash fragrances — Ice Blast, Orange, and Strawberry — brought premium personal care into the Paavit family.</p>
+                    </div>
+                </article>
+                <article class="about-timeline-item reveal" style="transition-delay: 0.3s;">
+                    <div class="about-timeline-marker"><span>04</span></div>
+                    <div class="about-timeline-body">
+                        <h3>Scaling Up</h3>
+                        <p>5 litre cans for hotels, hostels, and institutions — plus combo offers and subscriptions so partners save more as they grow with us.</p>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
 
+    <!-- Stats -->
+    <section class="stats reveal">
+        <div class="container grid-4">
+            <div class="stat-item"><h3><span class="counter" data-target="5000">0</span>+</h3><p>Happy Families</p></div>
+            <div class="stat-item"><h3><span class="counter" data-target="500">0</span>+</h3><p>Retail Partners</p></div>
+            <div class="stat-item"><h3><span class="counter" data-target="7">0</span></h3><p>Premium Products</p></div>
+            <div class="stat-item"><h3><span class="counter" data-target="100">0</span>%</h3><p>Quality Tested</p></div>
+        </div>
+    </section>
 
-    
-<script src="script.js" defer></script>
+    <!-- Quality Promise -->
+    <section class="about-promise section-padding">
+        <div class="container">
+            <div class="text-center reveal" style="max-width: 640px; margin: 0 auto 4rem;">
+                <span class="hero-tag">Our Craft</span>
+                <h2 style="color: var(--primary);">Quality in Every Bottle</h2>
+                <p>From raw ingredients to the final label — every step is held to a standard we'd use in our own homes.</p>
+            </div>
+            <div class="about-promise-grid">
+                <article class="about-promise-card reveal">
+                    <i class="fas fa-microscope"></i>
+                    <h3>Lab Tested</h3>
+                    <p>Each batch passes stringent quality checks for pH balance, efficacy, and safety before it reaches you.</p>
+                </article>
+                <article class="about-promise-card reveal" style="transition-delay: 0.1s;">
+                    <i class="fas fa-recycle"></i>
+                    <h3>Conscious Formulas</h3>
+                    <p>We prioritise biodegradable surfactants and responsible packaging wherever possible.</p>
+                </article>
+                <article class="about-promise-card reveal" style="transition-delay: 0.2s;">
+                    <i class="fas fa-box-open"></i>
+                    <h3>Two Pack Sizes</h3>
+                    <p>1 litre bottles for everyday retail and 5 litre cans for commercial scale — same trusted formula in both.</p>
+                </article>
+            </div>
+        </div>
+    </section>
 
+    <!-- CTA -->
+    <section class="section-padding" style="padding-top: 0;">
+        <div class="container">
+            <article class="usage-banner reveal">
+                <div class="usage-banner-content">
+                    <div class="usage-banner-icon"><i class="fas fa-sparkles"></i></div>
+                    <div>
+                        <span class="usage-label usage-label-light">Join the Paavit Family</span>
+                        <h3>Ready to Experience the Difference?</h3>
+                        <p>Browse our full collection or reach out for distributorship, bulk orders, and custom quotes.</p>
+                    </div>
+                </div>
+                <div class="usage-banner-actions">
+                    <a href="products.html" class="btn btn-outline usage-btn-light">View All Products</a>
+                    <a href="contact.html" class="btn btn-primary">Get in Touch <i class="fas fa-arrow-right" style="margin-left: 8px;"></i></a>
+                </div>
+            </article>
+        </div>
+    </section>
 
+    {% include paavit/footer-simple.html %}
+
+    <button id="back-to-top" aria-label="Back to Top"><i class="fas fa-arrow-up"></i></button>
+    {% include paavit/scripts.html %}
 </body>
 </html>
